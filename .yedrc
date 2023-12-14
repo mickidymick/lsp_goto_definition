@@ -1,0 +1,13 @@
+plugins-add-dir           "~/tmp_yed/new_plugins/lsp_goto_definition"
+plugin-load               "lsp_goto_definition"
+
+set "mouse-menu-on-word"      "Paste paste-yank-buffer                                                                            \
+                              'Jump to Definition' 'multi jump-stack-push ctags-jump-to-definition'                               \
+                               Manpage 'man-word'                                                                                 \
+                               Convert convert-number                                                                             \
+                              'LSP Goto Definition' 'multi jump-stack-push lsp-goto-definition'                                   \
+                              "
+#                               'LSP Info' lsp-info"
+
+plugin-unload             "ypm/plugins/lsp_info_popup"
+set builder-build-command "./build.sh"
